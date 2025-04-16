@@ -1,0 +1,80 @@
+.search-bar {
+    background-color: white;
+    border-radius: 9999px;
+    height: 88px;
+    width: 1106px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+  
+  .location {
+    background-color: #fde3fa;
+    width: 258px;
+    height: 66px;
+    border-radius: 9999px;
+    padding: 17px 29px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    align-self: stretch;
+  }
+  
+  .search-input {
+    height: 20px;
+    color: #0c87f2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .input-label {
+    color: #be07a2;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'League Spartan', sans-serif;
+    margin-top: 2px;
+  }
+  
+  .search-icon {
+    margin-left: auto;
+    background-color: #d9d9d9;
+    color: #be07a2;
+    font-size: 24px;
+    height: 60px;
+    width: 62px;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-icon.clicked {
+    transform: scale(0.95);
+  }
+  

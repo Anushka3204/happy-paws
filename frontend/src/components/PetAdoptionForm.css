@@ -1,0 +1,55 @@
+.adoption-form {
+    background-color: #f7f7f7;
+    padding: 3rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .adoption-form form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .adoption-form input,
+  .adoption-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  .adoption-form button {
+    background-color: #ffd369;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .adoption-form button:hover {
+    background-color: #ffb347;
+  }
+  
+  .adoption-form h2 {
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .adoption-form .error-message,
+  .adoption-form .success-message {
+    color: #ff4d4d;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .adoption-form .success-message {
+    color: #4CAF50;
+  }
+  
