@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import './NavBar.css';
+import React, { useEffect, useState } from "react";
+import "./NavBar.css";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // for hamburger toggle
 
   useEffect(() => {
     const email = localStorage.getItem("userEmail");
-    setIsLoggedIn(!!email); 
+    setIsLoggedIn(!!email);
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userName");
     setIsLoggedIn(false);
-    window.location.href = "/"; 
+    window.location.href = "/";
   };
 
   return (
@@ -22,7 +23,16 @@ const Navbar = () => {
         <img src="/pet-logo.png" alt="Website Logo" className="logo" />
         <h1>Happy Paws</h1>
       </div>
-      <ul className="navbar-links">
+
+      {/* Hamburger icon */}
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <span className={isOpen ? "bar open" : "bar"}></span>
+        <span className={isOpen ? "bar open" : "bar"}></span>
+        <span className={isOpen ? "bar open" : "bar"}></span>
+      </div>
+
+      {/* Links */}
+      <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li><a href="/">Home</a></li>
         {!isLoggedIn && (
           <>
